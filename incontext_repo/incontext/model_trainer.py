@@ -92,6 +92,7 @@ def test_empirical_statistics(
   """Plots models predictions and empirical weights."""
   # W are sampling one less than usual, otherwise the position encodings
   # used for the last example will be untrained parameter.
+  logging.info(f"Running empirical statistics for {x_distribution_str}")
   sampler = sampler_lib.Sampler(
       num_exemplars - 1,
       x_dim,
@@ -102,6 +103,7 @@ def test_empirical_statistics(
   )
 
   for itr in range(n_eval):
+    logging.info(f"Running empirical statistics - {itr=}")
     data = sampler.sample(n=1)
     # We keep the W same so that we can get the average stats for a single W
     seqs, coefficients, xs, ys = [
