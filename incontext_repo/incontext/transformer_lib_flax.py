@@ -42,8 +42,8 @@ import numpy as np
 Array = utils.Array
 Dtype = utils.Dtype
 
-flags.DEFINE_integer("n_layers", default=12, help="n_layers.")
-flags.DEFINE_integer("n_heads", default=8, help="n_heads.")
+flags.DEFINE_integer("n_layers", default=16, help="n_layers.")
+flags.DEFINE_integer("n_heads", default=4, help="n_heads.")
 flags.DEFINE_integer("hidden_size", default=512, help="hidden_size.")
 flags.DEFINE_bool("norm_first", default=True, help="Layer norms comes first.")
 flags.DEFINE_bool(
